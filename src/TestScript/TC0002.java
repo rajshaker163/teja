@@ -3,14 +3,13 @@ package TestScript;
 import org.apache.log4j.xml.DOMConfigurator;
 import com.hrms.lib.General;
 
-public class Delete extends General{
-
-	//public static void main(String[] args) {
+public class TC0002 {
+	
+	public static void main(String[] args)throws Exception  {
 		// TODO Auto-generated method stub
 		
-		public void delete() throws Exception
-		{
-			DOMConfigurator.configure("log4j.xml");
+	//	public void Delete() throws Exception
+		DOMConfigurator.configure("log4j.xml");
 		     General g1=new General();
 		     g1.open();
 		     Thread.sleep(2000);

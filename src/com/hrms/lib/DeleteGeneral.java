@@ -3,8 +3,6 @@ package com.hrms.lib;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Reporter;
-
 import com.utility.Log;
 
 public class DeleteGeneral extends DeleteGlobal {
@@ -12,13 +10,13 @@ public class DeleteGeneral extends DeleteGlobal {
 	
 	public void openAppication()
 	{
-System.setProperty("webdriver.chrome.driver","C:\\GD\\ch\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver","C:\\GD\\chromedriver.exe");
 		
 		ChromeOptions n=new ChromeOptions();
 		n.addArguments("--remote-allow-origins=*");
 		driver=new ChromeDriver(n);
 		driver.get(url);
-        Reporter.log("open");
+       // Reporter.log("open");
         Log.info("opened");
 	}
 	public void logindetails()

@@ -4,21 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Reporter;
-
 import com.utility.Log;
 
 public class General extends Global {
 	//	@BeforeClass
 	public void open()
 	{
-System.setProperty("webdriver.chrome.driver","C:\\GD\\ch\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver","C:\\GD\\chromedriver.exe");
 		
 		ChromeOptions n=new ChromeOptions();
 		n.addArguments("--remote-allow-origins=*");
 		driver=new ChromeDriver(n);
 		driver.get(url);
-        Reporter.log("open");
+    //    Reporter.log("open");
         Log.info("opened");
 		
 	}
@@ -26,7 +24,7 @@ System.setProperty("webdriver.chrome.driver","C:\\GD\\ch\\chromedriver.exe");
 public void close()
 {
 	driver.close();
-	Reporter.log("closed");
+	//Reporter.log("closed");
 	Log.info("closed");
 }
 	//@Test
@@ -35,7 +33,7 @@ public void log1in()
 	driver.findElement(By.name(txt_username)).sendKeys(un);
 	driver.findElement(By.name(txt_Password)).sendKeys(pw);
 	driver.findElement(By.name(btn_login)).click();
-	Reporter.log("log1in");
+	//Reporter.log("log1in");
 	Log.info("log1in");
 }
 public void log1out()
@@ -45,20 +43,20 @@ public void log1out()
 public void Frames()
 {
 	driver.switchTo().frame( Frames);
-	Reporter.log("entered");
+	//Reporter.log("entered");
 	Log.info("entered");
 }
 public void Exit()
 {
 	driver.switchTo().defaultContent();
-	Reporter.log("exit");
+//	Reporter.log("exit");
 	Log.info("exit");
 }
 //@Test
 public void SearchBy()
 {
 	driver.findElement(By.name(btn_SearchBy)).sendKeys(SearchBy);
-	Reporter.log("search");
+	//Reporter.log("search");
 	Log.info("seearch");
 }
 //@Test
@@ -72,7 +70,7 @@ public void Add()
 	driver.findElement(By.name(txt_MName)).sendKeys(MName);
 	WebElement element=driver.findElement(By.name(Photo));
 	element.sendKeys(photo1);
-	Reporter.log("enterd details"); 
+	//Reporter.log("enterd details"); 
 	Log.info("entered details sucessfully");
 }
 public void save()
